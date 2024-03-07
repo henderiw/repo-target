@@ -1,0 +1,14 @@
+apiVersion: claim.pkg.kform.dev/v1alpha1
+kind: PackageDependency
+metadata:
+  name: templates
+  namespace: example
+  annotations:
+    kform.dev/block-type: input
+    kform.dev/default: "true"
+spec: 
+  upstream:
+    repository: repo-catalog
+    realm: infra/workload-cluster
+    package: capi-kind-templates
+    revision: v1
